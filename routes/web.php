@@ -17,5 +17,5 @@ Route::get('/ｐ２',function () {
 Route::get('/ｐ３',function () {
     return view('ｐ３');
 });
-
+//コメントアウトを追加
 ?>
