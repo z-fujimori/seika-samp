@@ -22,6 +22,8 @@
             <img src= {{ $post->img_path }} class="show_img">
         </div>
     </div>
+    @guest
+    @else
     <div class="edit"><a href="/posts/{{ $post->id }}/edit">edit</a></div>
     <div class="delete">
         <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
@@ -32,12 +34,13 @@
         <script>
             function deletePost(id) {
                 'use strict'
-                if (confirm('削除すると復元できません。\n本当に削除しますか？')) {
+                if (confirm('削除すると復元する事ができません。\n本当に削除しますか？')) {
                     document.getElementById(`form_${id}`).submit();
                 }
             }
         </script>
     </div>
+    @endguest
     <div class="footer">
         <a href="/">戻る</a>
     </div>

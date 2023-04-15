@@ -30,6 +30,7 @@ body {
     color: white;
     font-size: 14px;
   }
+  
   .post {
     width: 500px; 
     margin: 0 auto 15px auto;
@@ -38,21 +39,25 @@ body {
     border: solid 1px #161a20;/*線*/
 
   }
+
   .comment {
     margin: 10px 0;
     padding: 0 15px 15px 15px; 
     background-color: #da7; 
   }
+
   .commment_link {
     text-align: right;
   }
   .login{
     text-align: right;
   }
+
   .show_img{
     max-width: 60%;
     height: auto;
   }
+
   .content {
     margin: 10px 0;
     padding: 0 15px 15px 15px; 
