@@ -18,8 +18,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light bg-info shadow-sm">            <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     ホーム
                 </a>

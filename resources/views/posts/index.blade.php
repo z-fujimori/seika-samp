@@ -30,9 +30,7 @@
     @guest
     @else
         <div>
-            <a href="/posts/create">投稿作成</a>
-        </div>
-        <p>{{ Auth::user()->name }}</p>
+        <a href="/posts/create" class="font-size-a">投稿作成</a>        </div>
     @endguest
 
     <div class='posts'>
@@ -43,6 +41,7 @@
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                 </h2>
                 <p class='body'>{{ $post->body }}</p>
+                <p class='user'>{{ $users[$post->user_id] }}</p>
             </div>
         @endforeach
         

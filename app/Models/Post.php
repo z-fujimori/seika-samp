@@ -14,11 +14,15 @@ class Post extends Model
     protected $fillable = [
     'title',
     'body',
-    'img_path'
+    'img_path',
+    'user_id'
     ];
     
-    
-
+    /*
+    public function users(){
+        return $this->hasMany('app\Models\Users');
+    }
+    */
 }    
 
 
