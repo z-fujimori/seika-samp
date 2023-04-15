@@ -9,6 +9,22 @@
 </head>
 
 <body>
+    @guest
+        <div class='login'>
+                <a href="{{ route('login') }}">ログイン</a>
+                <a href="{{ route('register') }}">ユーザー登録</a>
+        </div>
+    @else
+        <div class='login'>
+            <a href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                        ログアウト</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                @csrf
+            </form>
+        </div>
+    @endguest
     <h1 class="title">編集画⾯</h1>
     <div class="content">
         <form action="/posts/{{ $post->id }}" method="POST">

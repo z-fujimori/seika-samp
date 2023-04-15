@@ -7,6 +7,22 @@
 
     </head>
     <body>
+        @guest
+            <div class='login'>
+                    <a href="{{ route('login') }}">ログイン</a>
+                    <a href="{{ route('register') }}">ユーザー登録</a>
+            </div>
+        @else
+            <div class='login'>
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                            ログアウト</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                </form>
+            </div>
+        @endguest
         <h1>Blog Name</h1>
         <form action="/posts" method="POST" enctype="multipart/form-data">
             @csrf
