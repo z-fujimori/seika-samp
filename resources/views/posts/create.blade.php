@@ -9,15 +9,16 @@
     <body>
         @guest
             <div class='login'>
-                    <a href="{{ route('login') }}">ログイン</a>
-                    <a href="{{ route('register') }}">ユーザー登録</a>
+                <a href="{{ route('login') }}">ログイン</a>
+                <a href="{{ route('register') }}">ユーザー登録</a>
             </div>
         @else
             <div class='login'>
                 <a href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
-                            ログアウト</a>
+                            ログアウト
+                </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
                     @csrf
                 </form>

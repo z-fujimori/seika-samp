@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    @guest
+@guest
         <div class='login'>
                 <a href="{{ route('login') }}">ログイン</a>
                 <a href="{{ route('register') }}">ユーザー登録</a>

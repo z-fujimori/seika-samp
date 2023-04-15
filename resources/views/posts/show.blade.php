@@ -27,17 +27,23 @@
         </div>
     @endguest
     <h1 class="title">
-        {{ $post->title }}
+        ラーメン・つけ麺、、、
+        
     </h1>
     <div class="content">
         <div class="content__post">
-            <h3>本⽂</h3>
+            <h3>
+                {{ $post->title }}
+                {{ $user_name }}
+            </h3>
             <p>{{ $post->body }}</p>
         </div>
         <div class="img">
             <img src= {{ $post->img_path }} class="show_img">
         </div>
     </div>
+
+
     @guest
     @else
     <div class="edit"><a href="/posts/{{ $post->id }}/edit">edit</a></div>
