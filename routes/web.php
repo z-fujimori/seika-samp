@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+
+
 Route::post('/create', [PostController::class, 'store']);
 */
 
