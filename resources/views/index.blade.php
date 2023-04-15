@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <link rel="stylesheet" href="style.css">
-        <title>ララベル試し</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
     </head>
-    <body>
-        <h1>ララベル試しホーム</h1>
+    <body class="antialiased">
+        
+        <h1>aaaaa</h1>
 
-        <img src="{{ asset('images/inu.jpeg') }}" alt="inu">
+        <form action="/create" method="post" enctype="multipart/form-data">
+            @csrf
+                <!-- アップロードフォームの作成 -->
+                <input type="file" name="image">
+                <input type="submit" value="アップロード">
+        </form>
 
-        <h2>以下からページに飛べます</h2>
-        <a href="{{url('/ｐ１')}}">p1</a>
-        <a href="{{url('/ｐ２')}}">p2</a>
-        <a href="{{url('/ｐ３')}}">p3</a>
+
     </body>
 </html>
