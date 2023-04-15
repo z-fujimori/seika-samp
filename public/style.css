@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
     background-color:#e9ffe8;
     font-size: 14px;
     font-family: Helvetica,Arial,sans-serif;
@@ -58,3 +59,8 @@ body {
     padding: 0 15px 15px 15px; 
     background-color: #da7; 
   }
+=======
+    text-align: center;
+    color: rgb(76, 76, 228);
+}
+>>>>>>> origin/main
