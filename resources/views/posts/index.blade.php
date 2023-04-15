@@ -30,9 +30,8 @@
     @guest
     @else
         <div>
-            <a href="/posts/create">投稿作成</a>
+            <a href="/posts/create" class="font-size-a">投稿作成</a>
         </div>
-        <p>{{ Auth::user()->name }}</p>
     @endguest
 
     <div class='posts'>
