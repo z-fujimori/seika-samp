@@ -49,7 +49,7 @@
 
                 <div class="station">
                     <p>近くの駅</p>
-                        <input type="radio" name="post[station]" id="hachiouji" value="八王子駅" onclick="radioDeselection(this, 1)">
+                        <input type="radio" name="station" id="hachiouji" value="八王子駅" onclick="radioDeselection(this, 1)">
                         <label for="hachiouji" class="label">八王子駅</label>
                         <input type="radio" name="station" id="sinjyuku" value="新宿駅" onclick="radioDeselection(this, 2)">
                         <label for="sinjyuku" class="label">新宿駅</label>
