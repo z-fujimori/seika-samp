@@ -27,7 +27,7 @@
         <h1>Blog Name</h1>
         <form action="/posts" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="title">
+            <div class='title'>
                 <h2>タイトル</h2>
                 <input type="text" name="post[title]" placecholder="OO家" value="{{ old('post.title')}}"/>
                 <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
@@ -43,7 +43,7 @@
             <input type="submit" value="投稿"/>
         </from>
         <div class="footer">
-            <a href="/">戻る</a>
+            <a href="/" class="font-size-b">戻る</a>
         </div>
     </body>
 </html>
