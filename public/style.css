@@ -67,3 +67,27 @@ h3 {
   background: rgb(165, 201, 255);
   color: #0066ff;
 }
+.font-size-b{
+  font-size: 25px;
+  display: inline-block;
+  padding: 3px 10px;
+  text-decoration: none;
+  background: rgb(165, 201, 255);
+}
+.button-size{
+  width: 100pt;
+  padding: 10px;
+}
+.text-size-in{
+  width: 130pt;
+  line-height: 2em;
+}
+.textarea {
+  width         : 350px;
+  padding       : 8px;
+  font-size     : 15px;
+  line-height   : 19px;               
+}
+input[type="text"]{
+  font-size: 120%;
+}
