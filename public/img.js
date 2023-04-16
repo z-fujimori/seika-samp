@@ -1,5 +1,5 @@
 
-
+//３ｍB を超えた画像をはじく
 const fileLimit = 1024 * 1024 * 3;
 const fileUploads = document.querySelectorAll('.upload-limit');
 fileUploads.forEach(fileUpload => {
@@ -16,6 +16,7 @@ fileUploads.forEach(fileUpload => {
 });
 
 
+//画像のプレビュー表示（未完成）
 document.getElementById('img').addEventListener('change', function (e) {
     // 1枚だけ表示する
     var file = e.target.files[0];
@@ -42,3 +43,15 @@ $('#imgFile').change(
         $(".preview img").css('opacity', 0);
     }
 );
+
+
+//ラジオボタン選択解除
+var remove = 0;
+function radioDeselection(already, numeric) {
+  if(remove == numeric) {
+    already.checked = false;
+    remove = 0;
+  } else {
+    remove = numeric;
+  }
+}
