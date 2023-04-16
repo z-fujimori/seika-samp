@@ -50,9 +50,11 @@ class PostController extends Controller
         $path = Storage::disk('s3')->putFile('img', $image, 'public');
         // アップロードした画像のフルパスを取得
         $image_path = Storage::disk('s3')->url($path);
+        //$request['post']と$request['station']を合体
+        $data = $request['post'];
+        $data['station'] = $request['station'];
 
-
-        $input_post = $request['post'] + array('img_path' => $image_path) + array('user_id' => Auth::user()->id );
+        $input_post = $data + array('img_path' => $image_path) + array('user_id' => Auth::user()->id);
 
         $post->fill($input_post)->save();
         return redirect('/posts/' . $post->id);
