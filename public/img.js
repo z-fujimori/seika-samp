@@ -1,4 +1,7 @@
 
+
+
+
 //３ｍB を超えた画像をはじく
 const fileLimit = 1024 * 1024 * 3;
 const fileUploads = document.querySelectorAll('.upload-limit');
@@ -17,7 +20,7 @@ fileUploads.forEach(fileUpload => {
 
 
 //画像のプレビュー表示（未完成）
-document.getElementById('img').addEventListener('change', function (e) {
+document.getElementById('image').addEventListener('change', function (e) {
     // 1枚だけ表示する
     var file = e.target.files[0];
     // ファイルのブラウザ上でのURLを取得する
@@ -26,7 +29,7 @@ document.getElementById('img').addEventListener('change', function (e) {
     var img = document.getElementById('file-preview');
     img.src = blobUrl;
 });
-
+/*
 $('#imgFile').change(
     function () {
         if (!this.files.length) {
@@ -43,7 +46,7 @@ $('#imgFile').change(
         $(".preview img").css('opacity', 0);
     }
 );
-
+*/
 
 //ラジオボタン選択解除
 var remove = 0;

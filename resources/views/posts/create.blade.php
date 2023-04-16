@@ -8,6 +8,7 @@
         <style>
             input[type=radio] {display: none; /* ラジオボタンを非表示にする */}
         </style>
+        <!--<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
     </head>
     <body>
         @guest
@@ -44,6 +45,7 @@
                 <div class="image">
                     <div class="preview">
                         <input type="file" id="image" name="image" accept="image/*" class="upload-limit">
+                        <img id="file-preview" >
                     </div>
                 </div>
 
