@@ -31,7 +31,7 @@
         ラーメン・つけ麺、、、
         
     </h1>
-    <div class="content">
+    <div class="content" align="center">
         <div class="content__post">
             <h3>
                 {{ $post->title }}

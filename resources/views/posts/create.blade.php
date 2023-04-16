@@ -28,17 +28,18 @@
             </div>
         @endguest
         <h1>Blog Name</h1>
-        <div class="content">
+        <div class="content" align="center">
             <form action="/posts" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="title">
                     <h2>タイトル</h2>
-                    <input type="text" name="post[title]" placecholder="OO家" value="{{ old('post.title')}}"/>
+                    <input type="text" name="post[title]" placecholder="OO家" value="{{ old('post.title')}}" class="text-size-in"/>
                     <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
                 </div>
                 <div class="body">
                     <h2>本文</h2>
-                    <textarea name="post[body]" placecholder="ここのラーメンはおいしかった">{{ old('post.body') }}</textarea>
+                    <textarea id="text-in" class="textarea" name="post[body]" placeholder="ここのラーメンはおいしかった" oninput="textAreaHeightSet(this)"
+                        onchange="textAreaHeightSet(this)">{{ old('post.body') }}</textarea>
                     <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
                 </div>
                 <div class="image">
@@ -56,7 +57,7 @@
                 </div>
                 
 
-                <input type="submit" value="投稿"/>
+                <input type="submit" value="投稿" class="button-size"/>
             </from>
         </div>
         
@@ -65,7 +66,16 @@
         </div>
 
 
+        <script>
+            function textAreaHeightSet(argObj){
+                argObj.style.height = "10px";
+                var wSclollHeight = parseInt(argObj.scrollHeight);
+                var wLineH = parseInt(argObj.style.lineHeight.replace(/px/, ''));
+                if(wSclollHeight < (wLineH * 2)){wSclollHeight=(wLineH * 2);}
+                argObj.style.height = wSclollHeight + "px";
+            }
 
+        </script>
         <script src="{{ asset('/img.js')  }}"></script>
     </body>
 </html>

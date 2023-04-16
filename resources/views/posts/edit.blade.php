@@ -38,7 +38,7 @@
                 <h2>本⽂</h2>
                 <input type='text' name='post[body]' value="{{ $post->body }}">
             </div>
-            <input type="submit" value="保存">
+            <input type="submit" value="保存" class="button-size">
         </form>
     </div>
 </body>
