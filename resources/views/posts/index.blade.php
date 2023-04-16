@@ -5,6 +5,8 @@
     <title>Blog</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('/style.css')  }}" >
+    <link rel="stylesheet" href="/css/preview.css" >
+
     <!--<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">-->
 </head>
 <body>
@@ -42,6 +44,9 @@
                 </h2>
                 <p class='body'>{{ $post->body }}</p>
                 <p class='user'>{{ $users[$post->user_id] }}</p>
+                @if($post->station != null)
+                    <p class="tug">{{ $post->station }}</p>
+                @endif
             </div>
         @endforeach
         

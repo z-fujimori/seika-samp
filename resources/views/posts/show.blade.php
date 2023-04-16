@@ -6,6 +6,7 @@
     <title>Posts</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('/style.css')  }}" >
+    <link rel="stylesheet" href="/css/preview.css" >
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 </head>
@@ -37,10 +38,12 @@
                 {{ $user_name }}
             </h3>
             <p>{{ $post->body }}</p>
+            
         </div>
         <div class="img">
             <img src= {{ $post->img_path }} class="show_img">
         </div>
+        <p class="tug">{{ $post->station }}</p>
     </div>
 
 
