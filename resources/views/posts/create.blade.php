@@ -46,7 +46,7 @@
                 <div class="image">
                     <div class="preview">
                         <input type="file" id="image" name="image" accept="image/*" class="upload-limit">
-                        <img id="file-preview" >
+                        <img id="file-preview" class="file-preview">
                     </div>
                 </div>
 

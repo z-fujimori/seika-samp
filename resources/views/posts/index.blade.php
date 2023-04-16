@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>麺stagram</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('/style.css')  }}" >
     <link rel="stylesheet" href="/css/preview.css" >
@@ -27,7 +27,7 @@
         </div>
     @endguest
 
-    <h1>Blog Name</h1>
+    <h1>麺stagram</h1>
 
     @guest
     @else
@@ -42,12 +42,14 @@
                 <h2 class='title'>
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                 </h2>
-                <p class='body'>{{ $post->body }}</p>
-                <p class='user'>{{ $users[$post->user_id] }}</p>
+                <p class='body'>内容：{{ $post->body }}</p>
+                <p class='user'>投稿者：{{ $users[$post->user_id] }}</p>
                 @if($post->station != null)
                     <p class="tug">{{ $post->station }}</p>
+                <div><h4></h4></div>
                 @endif
             </div>
+            
         @endforeach
         
     </div>

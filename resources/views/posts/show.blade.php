@@ -43,7 +43,9 @@
         <div class="img">
             <img src= {{ $post->img_path }} class="show_img">
         </div>
-        <p class="tug">{{ $post->station }}</p>
+        @if($post->station != null)
+            <p class="tug">{{ $post->station }}</p>
+        @endif
     </div>
 
 
