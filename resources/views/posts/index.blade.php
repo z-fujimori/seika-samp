@@ -39,15 +39,22 @@
         
         @foreach ($posts as $post)
             <div class='post'>
-                <h2 class='title'>
-                    <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
-                </h2>
-                <p class='body'>内容：{{ $post->body }}</p>
-                <p class='user'>投稿者：{{ $users[$post->user_id] }}</p>
-                @if($post->station != null)
-                    <p class="tug">{{ $post->station }}</p>
-                <div><h4></h4></div>
-                @endif
+                <!--<div class="divide">-->
+                    <div class="prat">
+                        <h2 class='title'>
+                            <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                        </h2>
+                        <p class='body'>内容：{{ $post->body }}</p>
+                        <p class='user'>投稿者：{{ $users[$post->user_id] }}</p>
+                        @if($post->station != null)
+                            <p class="tug">{{ $post->station }}</p>
+                        <div><h4></h4></div>
+                        @endif
+                    </div>
+                    <div class="part">
+                        <img src= {{ $post->img_path }} class="show_img">
+                    </div>
+                <!--</div>-->
             </div>
             
         @endforeach

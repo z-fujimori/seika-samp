@@ -37,6 +37,8 @@ h3 {
   background-color: rgb(214, 252, 255);
   border: solid 1px #161a20;/*線*/
 
+  display:flex;
+  justify-content: space-between;
 }
 .comment {
   margin: 10px 0;
@@ -90,4 +92,15 @@ h3 {
 }
 input[type="text"]{
   font-size: 120%;
+}
+
+/*投稿を半分に分ける
+.divide{
+  display:flex;
+  justify-content: space-between;
+}*/
+.part{
+  text-align: center;
+  width: 40%;
+  height: 80%;
 }

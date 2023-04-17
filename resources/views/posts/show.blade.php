@@ -35,7 +35,6 @@
         <div class="content__post">
             <h3>
                 {{ $post->title }}
-                {{ $user_name }}
             </h3>
             <p>{{ $post->body }}</p>
             
@@ -46,6 +45,7 @@
         @if($post->station != null)
             <p class="tug">{{ $post->station }}</p>
         @endif
+        <div><h5>投稿者：{{ $user_name }}</h5></div>
     </div>
 
 
