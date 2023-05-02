@@ -42,8 +42,9 @@
                 <!--<div class="divide">-->
                     <div class="prat">
                         <h2 class='title'>
-                            <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                            <a href="/posts/{{ $post->id }}">{{ $post->shop_name }}</a>
                         </h2>
+                        <p class='ra-men'>商品：{{ $post->ramen_name }}</p>
                         <p class='body'>内容：{{ $post->body }}</p>
                         <p class='user'>投稿者：{{ $users[$post->user_id] }}</p>
                         @if($post->station != null)

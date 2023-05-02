@@ -6,7 +6,8 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'post.title' => 'required|string|max:100',
+            'post.shop_name' => 'required|string|max:100',
+            'post.ramen_name' => 'required|string|max:100',
             'post.body' => 'required|string|max:4000',
             'post.img_path',
             'post.station',

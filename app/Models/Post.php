@@ -12,7 +12,8 @@ class Post extends Model
     use SoftDeletes;
     
     protected $fillable = [
-    'title',
+    'shop_name',
+    'ramen_name',
     'body',
     'img_path',
     'user_id',

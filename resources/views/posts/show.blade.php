@@ -28,14 +28,15 @@
         </div>
     @endguest
     <h1 class="title">
-        ラーメン・つけ麺、、、
+        麺stagram
         
     </h1>
     <div class="content" align="center">
         <div class="content__post">
             <h3>
-                {{ $post->title }}
+                {{ $post->shop_name }}
             </h3>
+            <h4>{{ $post->ramen_name }}<h4>
             <p>{{ $post->body }}</p>
             
         </div>
@@ -45,7 +46,8 @@
         @if($post->station != null)
             <p class="tug">{{ $post->station }}</p>
         @endif
-        <div><h5>投稿者：{{ $user_name }}</h5></div>
+        <div><h5>投稿者：{{ $user_name }}</h5
+        ></div>
     </div>
 
 

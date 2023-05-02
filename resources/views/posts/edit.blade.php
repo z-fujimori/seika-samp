@@ -25,15 +25,20 @@
             </form>
         </div>
     @endguest
+
+
     <h1 class="title">編集画⾯</h1>
     <div class="content">
         <form action="/posts/{{ $post->id }}" method="POST">
             @csrf
             @method('PUT')
             <div class='content__title'>
-                <h2>タイトル</h2>
-                <input type='text' name='post[title]' value="{{ $post->title }}">
+                <h2>店名</h2>
+                <input type='text' name='post[shop_name]' value="{{ $post->shop_name }}">
             </div>
+            <div class='content__ramen'>
+                <h2>商品</h2>
+                <input type='text' name='post[ramen_name]' value="{{ $post->ramen_name }}">
             <div class='content__body'>
                 <h2>本⽂</h2>
                 <input type='text' name='post[body]' value="{{ $post->body }}">

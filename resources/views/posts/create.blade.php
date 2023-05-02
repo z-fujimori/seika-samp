@@ -33,10 +33,14 @@
             <form action="/posts" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="title">
-                    <h2>タイトル</h2>
-                    <input type="text" name="post[title]" placecholder="OO家" value="{{ old('post.title')}}" class="text-size-in"/>
-                    <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
+                    <h2>店名</h2>
+                    <input type="text" name="post[shop_name]" placecholder="OO家" value="{{ old('post.shop_name')}}" class="text-size-in"/>
+                    <p class="title__error" style="color:red">{{ $errors->first('post.shop_name') }}</p>
                 </div>
+                <div class="ra-men">
+                    <h2>食べたラーメン</h2>
+                    <input type="text" name="post[ramen_name]" placecholder="チャーシューラーメン" value="{{ old('post.ramen_name')}}" class="text-size-in"/>
+                    <p class="title__error" style="color:red">{{ $errors->first('post.ramen_name') }}</p>
                 <div class="body">
                     <h2>本文</h2>
                     <textarea id="text-in" class="textarea" name="post[body]" placeholder="ここのラーメンはおいしかった" oninput="textAreaHeightSet(this)"
@@ -68,6 +72,7 @@
         </div>
 
 
+        
         <script>
             function textAreaHeightSet(argObj){
                 argObj.style.height = "10px";
@@ -76,8 +81,8 @@
                 if(wSclollHeight < (wLineH * 2)){wSclollHeight=(wLineH * 2);}
                 argObj.style.height = wSclollHeight + "px";
             }
-
         </script>
+
         <script src="{{ asset('/img.js')  }}"></script>
     </body>
 </html>
