@@ -9,6 +9,8 @@ use App\Models\User;
 use App\Http\Requests\PostRequest;
 use Illuminate\Support\Facades\Auth;
 
+use GuzzleHttp\Client; // hotpepperここを追記
+
 
 class PostController extends Controller
 {
@@ -77,4 +79,32 @@ class PostController extends Controller
         $post->delete();
         return redirect('/');
     }
+
+    //hotpepper
+    // HTTPリクエストを送るURL
+    private const REQUEST_URL = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/';
+    // APIキー
+    private $api_key;
+
+    public function hotpepper(){
+        $client = new Client(); // インスタンス生成
+        $method = 'GET'; // HTTPリクエストメソッド
+        $this->api_key = config('hotpepper.api_key'); // APIキーを取得
+        // APIキーや検索ワードなどの設定を記述
+        $options = [
+            'query' => [
+                'key' => config('hotpepper.api_key'),
+                'keyword' => '新宿',
+                'genre' => 'G013',
+                'count' => 100,
+                'format' => 'json',
+            ],
+        ];
+        $response = $client->request($method, self::REQUEST_URL, $options); // HTTPリクエストを送信
+        // 'format' => 'json'としたのでJSON形式でデータが返ってくるので、連想配列型のオブジェクトに変換
+        $restaurants = json_decode($response->getBody(), true)['results'];
+        // dd($restaurants);
+        return view('hotpepper', ['restaurants' => $restaurants]);
+    }
+
 }
