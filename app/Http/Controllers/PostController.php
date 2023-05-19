@@ -96,7 +96,7 @@ class PostController extends Controller
                 'key' => config('hotpepper.api_key'),
                 'keyword' => '新宿',
                 'genre' => 'G013',
-                'count' => 800,
+                'count' => 70,
                 'format' => 'json',
             ],
         ];
